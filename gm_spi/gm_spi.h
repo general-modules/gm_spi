@@ -22,7 +22,7 @@ extern "C"
 
 #define GM_SPI_VERSION_MAJOR 1
 #define GM_SPI_VERSION_MINOR 0
-#define GM_SPI_VERSION_PATCH 0
+#define GM_SPI_VERSION_PATCH 1
 
 #define GM_SPI_CPHA 0x01
 #define GM_SPI_CPOL 0x02
@@ -39,7 +39,7 @@ typedef int (*gm_spi_cs_control_cb)(bool enable);
 
 // SPI模式定义
 // 其实在文件 "linux/spi/spidev.h" 中有定义
-typedef enum gm_spi_mode
+typedef enum _gm_spi_mode_e
 {
     E_GM_SPI_MODE_0 = (0 | 0),
     E_GM_SPI_MODE_1 = (0 | GM_SPI_CPHA),
@@ -48,7 +48,7 @@ typedef enum gm_spi_mode
 } gm_spi_mode_e;
 
 // SPI 对象
-typedef struct _gm_spi gm_spi_t;
+typedef struct _gm_spi_t gm_spi_t;
 
 /**
  * @brief 创建 SPI 对象

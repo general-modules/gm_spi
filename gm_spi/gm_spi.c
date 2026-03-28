@@ -22,7 +22,7 @@
 #include "gm_spi.h"
 
 // SPI 对象
-struct _gm_spi
+struct _gm_spi_t
 {
     int fd;
     gm_spi_cs_control_cb cs_control_cb;
